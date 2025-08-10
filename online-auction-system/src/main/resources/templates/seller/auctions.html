@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Auctions</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div th:replace="fragments/navbar :: navbar"></div>
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <h1>My Auctions</h1>
+      <a class="btn btn-primary" th:href="@{/seller/auctions/new}">Create</a>
+    </div>
+    <table class="table table-striped mt-3">
+      <thead><tr><th>Title</th><th>Ends</th><th>Approved</th><th>Actions</th></tr></thead>
+      <tbody>
+        <tr th:each="a : ${auctions}">
+          <td th:text="${a.title}"></td>
+          <td th:text="${#temporals.format(a.endTime, 'yyyy-MM-dd HH:mm')}"></td>
+          <td>
+            <span th:if="${a.approved}" class="badge bg-success">Approved</span>
+            <span th:unless="${a.approved}" class="badge bg-warning text-dark">Pending</span>
+          </td>
+          <td>
+            <a class="btn btn-sm btn-outline-secondary" th:href="@{'/seller/auctions/' + ${a.id} + '/edit'}">Edit</a>
+            <form class="d-inline" th:action="@{'/seller/auctions/' + ${a.id} + '/delete'}" method="post">
+              <button class="btn btn-sm btn-outline-danger" th:disabled="${a.approved}">Delete</button>
+            </form>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
