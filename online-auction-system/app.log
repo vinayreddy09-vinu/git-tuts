@@ -1,0 +1,88 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m-----------------< [0;36mcom.example:online-auction-system[0;1m >------------------[m
+[[1;34mINFO[m] [1mBuilding online-auction-system 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m]   from pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m>>> [0;32mspring-boot:3.3.3:run[m [1m(default-cli)[0;1m > [0;1mtest-compile[m @ [36monline-auction-system[0;1m >>>[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mresources:3.3.1:resources[m [1m(default-resources)[m @ [36monline-auction-system[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 12 resources from src/main/resources to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcompiler:3.11.0:compile[m [1m(default-compile)[m @ [36monline-auction-system[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module! :source
+[[1;34mINFO[m] Compiling 24 source files with javac [debug release 21] to target/classes
+[[1;34mINFO[m] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[[1;33mWARNING[m] /workspace/online-auction-system/src/main/java/com/example/auction/model/User.java:[30,21] @Builder will ignore the initializing expression entirely. If you want the initializing expression to serve as default, add @Builder.Default. If it is not supposed to be settable during building, make the field final.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mresources:3.3.1:testResources[m [1m(default-testResources)[m @ [36monline-auction-system[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /workspace/online-auction-system/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcompiler:3.11.0:testCompile[m [1m(default-testCompile)[m @ [36monline-auction-system[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module! :dependency
+[[1;34mINFO[m] Compiling 3 source files with javac [debug release 21] to target/test-classes
+[[1;34mINFO[m] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m<<< [0;32mspring-boot:3.3.3:run[m [1m(default-cli)[0;1m < [0;1mtest-compile[m @ [36monline-auction-system[0;1m <<<[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot:3.3.3:run[m [1m(default-cli)[m @ [36monline-auction-system[0;1m ---[m
+[[1;34mINFO[m] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.3)
+
+2025-08-10T18:01:57.221Z  INFO 7220 --- [Online Auction System] [           main] c.e.auction.OnlineAuctionApplication     : Starting OnlineAuctionApplication using Java 21.0.8 with PID 7220 (/workspace/online-auction-system/target/classes started by ubuntu in /workspace/online-auction-system)
+2025-08-10T18:01:57.222Z DEBUG 7220 --- [Online Auction System] [           main] c.e.auction.OnlineAuctionApplication     : Running with Spring Boot v3.3.3, Spring v6.1.12
+2025-08-10T18:01:57.222Z  INFO 7220 --- [Online Auction System] [           main] c.e.auction.OnlineAuctionApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-08-10T18:01:57.556Z  INFO 7220 --- [Online Auction System] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-10T18:01:57.586Z  INFO 7220 --- [Online Auction System] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 4 JPA repository interfaces.
+2025-08-10T18:01:57.890Z  INFO 7220 --- [Online Auction System] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-10T18:01:57.898Z  INFO 7220 --- [Online Auction System] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-10T18:01:57.898Z  INFO 7220 --- [Online Auction System] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2025-08-10T18:01:57.921Z  INFO 7220 --- [Online Auction System] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-10T18:01:57.922Z  INFO 7220 --- [Online Auction System] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 676 ms
+2025-08-10T18:01:57.941Z  INFO 7220 --- [Online Auction System] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-10T18:01:58.027Z  INFO 7220 --- [Online Auction System] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:auctiondb user=SA
+2025-08-10T18:01:58.028Z  INFO 7220 --- [Online Auction System] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-10T18:01:58.034Z  INFO 7220 --- [Online Auction System] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:auctiondb'
+2025-08-10T18:01:58.107Z  INFO 7220 --- [Online Auction System] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-10T18:01:58.135Z  INFO 7220 --- [Online Auction System] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-08-10T18:01:58.150Z  INFO 7220 --- [Online Auction System] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-10T18:01:58.276Z  INFO 7220 --- [Online Auction System] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-10T18:01:58.755Z  INFO 7220 --- [Online Auction System] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-10T18:01:58.793Z  INFO 7220 --- [Online Auction System] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-10T18:01:58.995Z  INFO 7220 --- [Online Auction System] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-10T18:01:59.304Z  WARN 7220 --- [Online Auction System] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-10T18:01:59.322Z  INFO 7220 --- [Online Auction System] [           main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-08-10T18:01:59.322Z  WARN 7220 --- [Online Auction System] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2025-08-10T18:01:59.386Z  INFO 7220 --- [Online Auction System] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-10T18:01:59.659Z  INFO 7220 --- [Online Auction System] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-10T18:01:59.660Z  INFO 7220 --- [Online Auction System] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2025-08-10T18:01:59.661Z  INFO 7220 --- [Online Auction System] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@357904d7]]
+2025-08-10T18:01:59.661Z  INFO 7220 --- [Online Auction System] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2025-08-10T18:01:59.665Z  INFO 7220 --- [Online Auction System] [           main] c.e.auction.OnlineAuctionApplication     : Started OnlineAuctionApplication in 2.617 seconds (process running for 2.773)
+2025-08-10T18:02:07.693Z  INFO 7220 --- [Online Auction System] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-10T18:02:07.693Z  INFO 7220 --- [Online Auction System] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-10T18:02:07.694Z  INFO 7220 --- [Online Auction System] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-10T18:02:07.793Z  WARN 7220 --- [Online Auction System] [nio-8080-exec-1] actStandardFragmentInsertionTagProcessor : [THYMELEAF][http-nio-8080-exec-1][index] Deprecated unwrapped fragment expression "fragments/navbar :: navbar" found in template index, line 10, col 8. Please use the complete syntax of fragment expressions instead ("~{fragments/navbar :: navbar}"). The old, unwrapped syntax for fragment expressions will be removed in future versions of Thymeleaf.

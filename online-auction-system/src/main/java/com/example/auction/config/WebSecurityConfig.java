@@ -1,7 +1,6 @@
 package com.example.auction.config;
 
 import com.example.auction.service.UserService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -15,10 +14,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableMethodSecurity
-@RequiredArgsConstructor
 public class WebSecurityConfig {
-
-    private final UserService userService;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -26,15 +22,15 @@ public class WebSecurityConfig {
     }
 
     @Bean
-    public UserDetailsService userDetailsService() {
-        return username -> userService.loadUserByUsername(username);
+    public UserDetailsService userDetailsService(UserService userService) {
+        return userService::loadUserByUsername;
     }
 
     @Bean
-    public DaoAuthenticationProvider authenticationProvider() {
+    public DaoAuthenticationProvider authenticationProvider(UserDetailsService userDetailsService, PasswordEncoder passwordEncoder) {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-        authProvider.setUserDetailsService(userDetailsService());
-        authProvider.setPasswordEncoder(passwordEncoder());
+        authProvider.setUserDetailsService(userDetailsService);
+        authProvider.setPasswordEncoder(passwordEncoder);
         return authProvider;
     }
 
@@ -60,7 +56,7 @@ public class WebSecurityConfig {
             .csrf(csrf -> csrf
                 .ignoringRequestMatchers("/ws/**", "/app/**", "/topic/**")
             )
-            .headers(headers -> headers.frameOptions(frame -> frame.disable())) // for H2 console
+            .headers(headers -> headers.frameOptions(frame -> frame.disable()))
             .httpBasic(Customizer.withDefaults());
 
         return http.build();
